@@ -55,3 +55,8 @@ DATABASES = {
 STATIC_URL  = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+# Dirección donde Django redirige cuando un @login_required falla
+LOGIN_URL = '/login/'
+
+# Opcional: hacia dónde va tras un login exitoso
+LOGIN_REDIRECT_URL = '/'
