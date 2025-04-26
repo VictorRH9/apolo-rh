@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><title>APOLO RH — Login</title></head>
+<body style="display:flex;justify-content:center;align-items:center;height:100vh">
+  <div style="width:300px;text-align:center">
+    <h1>APOLO RH</h1>
+    <form method="post">{% csrf_token %}
+      {{ form.username }}<br><br>
+      {{ form.password }}<br><br>
+      <button type="submit">Iniciar sesión</button>
+      {% if form.non_field_errors %}<p style="color:red">{{ form.non_field_errors.0 }}</p>{% endif %}
+    </form>
+  </div>
+</body>
+</html>

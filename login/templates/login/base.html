@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Apolo RH{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="{% url 'inicio' %}">Inicio</a>
+    <a href="{% url 'empleados' %}">Empleados</a>
+    <a href="{% url 'calculo' %}">Cálculo de nómina</a>
+    <a href="{% url 'historial' %}">Historial de nómina</a>
+    <a href="{% url 'anticipos' %}">Anticipo de nómina</a>
+    <a href="{% url 'configuracion' %}">Configuración</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+  </div>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
