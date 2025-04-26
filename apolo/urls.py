@@ -5,5 +5,5 @@ from login.views import inicio_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio_view, name='inicio'),
-    path('', include('login.urls')),
+    path('login/', include('login.urls')),
 ]
