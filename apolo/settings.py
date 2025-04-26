@@ -60,3 +60,7 @@ LOGIN_URL = '/login/'
 
 # Opcional: hacia dónde va tras un login exitoso
 LOGIN_REDIRECT_URL = '/'
+import os
+
+# al final del archivo
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
